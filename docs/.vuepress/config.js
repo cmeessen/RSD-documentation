@@ -2,13 +2,19 @@
 // SPDX-FileCopyrightText: 2022 Netherlands eScience Center
 //
 // SPDX-License-Identifier: Apache-2.0
+require('dotenv').config()
+
+let basePath = '/documentation/'
+if (process.env.GITHUB_REPOSITORY) {
+  basePath = '/' + process.env.GITHUB_REPOSITORY.split('/')[1] + '/'
+}
 
 module.exports = {
   // site config
   lang: 'en-US',
   title: 'RSD Documentation',
   description: 'RSD As a Service documentation',
-  base: '/documentation/',
+  base: basePath,
   port: '3030',
 
   themeConfig: {

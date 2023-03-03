@@ -21,6 +21,7 @@
     "vuepress-plugin-auto-sidebar": "^2.3.2"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "vuepress-bar": "^0.4.4",
     "vuepress-theme-reco": "^2.0.0-beta.3"
   }
